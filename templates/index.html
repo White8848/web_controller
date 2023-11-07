@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>机器人控制台</title>
+        <link rel="stylesheet" type="text/css" href="../static/style.css">
+        <!-- <script src="http://code.jquery.com/jquery.js"></script> -->
+        <script src="../static/jquery.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>机器人控制台</h1>
+        </div>
+        <div class="context">
+            <div class="column">
+                <div class="video">
+                    <img src="{{ url_for('video_feed') }}">
+                </div>
+            </div>
+            <div class="column">
+                <div class="text1" id="text1">
+                    <p id="p1">当前模式：</p>
+                    <p id="p2">外界温度：</p>
+                    <p id="p3">舵机速度：</p>
+                    <p id="p4">底盘速度：</p>
+                    <p id="p5">信号强度：</p>
+                </div>
+                <div class="text2" id="text2">
+                    <p id="p1">机械臂模式</p>
+                    <p id="p2">26°C</p>
+                    <p id="p3">100</p>
+                    <p id="p4">80</p>
+                    <p id="p5">强</p>
+                </div>
+                <div class="control1">
+                    <div class="but1 but">
+                        <button class="button" type="button" onclick="get_button(1)">前进</button>
+                    </div>
+                    <div class="but2 but">
+                        <button class="button" type="button" onclick="get_button(2)">左转</button>
+                    </div>
+                    <div class="but3 but">
+                        <button class="button" type="button" onclick="get_button(3)">右转</button>
+                    </div>
+                    <div class="but4 but">
+                        <button class="button" type="button" onclick="get_button(4)">后退</button>
+                    </div>
+                    <div class="but5 but">
+                        <button class="button" type="button" onclick="get_button(5)">合爪</button>
+                    </div>
+                    <div class="but6 but">
+                        <button class="button" type="button" onclick="get_button(6)">开爪</button>
+                    </div>
+                    <div class="but7 but">
+                        <button class="button" type="button" onclick="get_button(7)">翻筐</button>
+                    </div>
+                    <div class="but8 but">
+                        <button class="button" type="button" onclick="get_button(8)">收筐</button>
+                    </div>
+                </div>
+                <div class="control2">
+                    <p>图像传输</p>
+                    <div class=" switch">
+                        <label class="switch">
+                            <input type="checkbox" name="switch1" onclick="get_switch(1,checked)">
+                            <div class="slider round"></div>
+                        </label>
+                    </div>
+                    <p>手柄控制</p>
+                    <div class=" switch">
+                        <label class="switch">
+                            <input type="checkbox" name="switch2" onclick="get_switch(2,checked)">
+                            <div class="slider round"></div>
+                        </label>
+                    </div>
+                    <p>舵机开关</p>
+                    <div class=" switch">
+                        <label class="switch">
+                            <input type="checkbox" name="switch3" onclick="get_switch(3,checked)">
+                            <div class="slider round"></div>
+                        </label>
+                    </div>
+                    <!-- <p>开关4</p>
+                    <div class=" switch">
+                        <label class="switch">
+                            <input type="checkbox" name="switch3" onclick="get_switch(3,checked)">
+                            <div class="slider round"></div>
+                        </label>
+                    </div>
+                    <p>开关5</p>
+                    <div class=" switch">
+                        <label class="switch">
+                            <input type="checkbox" name="switch3" onclick="get_switch(3,checked)">
+                            <div class="slider round"></div>
+                        </label>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <script src="../static/index.js"></script>
+    </body>
+</html>
